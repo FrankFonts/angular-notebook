@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        :root {
+            font-size: 16px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #fbfbfb;
+        }
+
+        pre {
+            display: flex;
+            width: 100%;
+            overflow-x: scroll;
+            background: #1f1f2c;
+            color: #fff;
+            padding: 0 16px;
+            margin: 0;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+
+        code {
+            font-family: Input, Arial, Helvetica, sans-serif;
+            background-color: yellow;
+            padding: 0 .2em;
+        }
+
+        pre code {
+            background-color: transparent;
+            color: rgb(236, 237, 255);
+            padding: 0;
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        pre::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        pre {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        pre+pre {
+            margin-top: 1rem;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+
+        pre+h1,
+        pre+h2,
+        pre+h3,
+        pre+p {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+    <div class="container">
+
+
+
+
+
+        <h1 id="top">Angular Notebook</h1>
+
+        <h2 id="attribute-class-and-style-bindings">Attribute, Class, and Style Bindings</h2>
+
+        <h3 id="attribute-binding">Attribute Binding</h3>
+
+        <pre>
+        <code>
+&lt;td [attr.colspan]="3"&gt;three&lt;/td&gt;
+        </code>
+    </pre>
+
+        <h3 id="class-binding">Class Binding</h3>
+
+        <p>Setting the without (right) and with binding (rigth)</p>
+
+        <pre>
+        <code>
+&lt;div class="myClass" [class]="myClassBinding"&gt;
+        </code>
+    </pre>
+
+        <pre>
+        <code>
+&lt;h1 [class.myClass]="isTrue"&gt;This class binding is for true value&lt;/h1&gt;
+&lt;h1 [class.myClass]="!isTrue"&gt;This class binding is for false value&lt;/h1&gt;
+        </code>
+    </pre>
+
+        <h3 id="style-binding">Style Binding</h3>
+
+        <p>Use the <code>[style.stylename.optional-unit]</code> format</p>
+
+        <pre>
+        <code>
+&lt;h1 [style.color]="blue"&gt;This is a Blue Heading&lt;/&gt;
+        </code>
+    </pre>
+
+
+        <p>Can be evaluated</p>
+        <pre>
+        <code>
+&lt;span [style.font-size.px]="isTrue? 20 : 12"&gt;This style binding is set for true value&lt;/span&gt;
+&lt;span [style.font-size.%]="!isTrue : 120 : 30"&gt;This style binding is set for false value&lt;/span&gt;
+        </code>
+    </pre>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>
