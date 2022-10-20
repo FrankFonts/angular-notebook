@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Notebook</title>
+
+    <link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+    <div class="container">
+        <h1 id="top">
+            <a href="#top" class="permalink"></a>
+            Angular Notebook
+        </h1>
+
+
+        <section class="chapter">
+
+            <h2 id="attribute-class-and-style-bindings">
+                <a href="#attribute-class-and-style-bindings" class="permalink"></a> Attribute, Class, and Style
+                Bindings
+            </h2>
+
+            <h3 id="property-binding-with-brackets-in-angular">
+                <a href="#property-binding-with-brackets-in-angular" class="permalink"></a> Property binding with
+                brackets in Angular
+            </h3>
+
+            <p>
+                The brackets <code>[...]</code> cause Angular to evaluate the right-hand side of the assignment as a
+                dynamic expression.</p>
+
+            <p>Without
+                the brackets, Angular treats the right-hand side as a string literal and sets the property to that
+                static value.</p>
+
+            <h3 id="attribute-binding">
+                <a href="#attribute-binding" class="permalink"></a> Attribute Binding
+            </h3>
+
+
+            <pre>
+        <code>
+&lt;td [attr.colspan]="3"&gt;three&lt;/td&gt;
+        </code>
+    </pre>
+
+            <h3 id="class-binding">
+                <a href="#class-binding" class="permalink"></a> Class Binding
+            </h3>
+
+            <p>Setting the without (left) and with binding (right)</p>
+
+            <pre>
+        <code>
+&lt;div class="myClass" [class]="myClassBinding"&gt;
+        </code>
+    </pre>
+
+            <pre>
+        <code>
+&lt;h1 [class.myClass]="isTrue"&gt;This class binding is for true value&lt;/h1&gt;
+&lt;h1 [class.myClass]="!isTrue"&gt;This class binding is for false value&lt;/h1&gt;
+        </code>
+    </pre>
+
+            <h3 id="style-binding">
+                <a href="#style-binding" class="permalink"></a> Style Binding
+            </h3>
+
+            <p>Use the <code>[style.stylename.optional-unit]</code> format</p>
+
+            <pre>
+        <code>
+&lt;h1 [style.color]="blue"&gt;This is a Blue Heading&lt;/&gt;
+        </code>
+    </pre>
+
+
+
+            <pre>
+        <code>
+&lt;span [style.font-size.px]="isTrue? 20 : 12"&gt;This style binding is set for true value&lt;/span&gt;
+&lt;span [style.font-size.%]="!isTrue : 120 : 30"&gt;This style binding is set for false value&lt;/span&gt;
+        </code>
+    </pre>
+
+
+        </section>
+
+
+
+        <section class="chapter">
+
+            <h2 id="*ngTemplate">
+                <a href="#*ngTemplate" class="permalink"></a>
+                *ngTemplate
+            </h2>
+
+            <pre>
+                <code>
+<ng-container *ngTemplateOutlet="navigation; context: {classes: 'desktop', label: 'desktop'}"></ng-container>
+
+<ng-container *ngTemplateOutlet="navigation; context: {classes: 'mobile', label: 'mobile'}"></ng-container>
+
+<ng-template #navigation let-classes="classes" let-label="label">
+    <div [ngClass]="classes">
+        {{ label }}
+    </div>
+</ng-template>
+                </code>
+            </pre>
+
+
+        </section>
+
+
+
+
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>
